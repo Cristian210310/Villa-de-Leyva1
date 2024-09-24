@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopa de Letras Interactiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://img.freepik.com/fotos-premium/poster-dinosaurio-montana-al-fondo_910608-618.jpg);
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        h2 {
+            color: #ffffff;
+        }
+        p {
+            font-size: 2em;
+            text-align: left;
+            color: #ffffff;
+        }
+
+        .sopa-de-letras {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ffffff;
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        td.selected {
+            background-color: black;
+            color: #ffffff;
+        }
+
+        ul {
+            list-style: decimal;
+            padding: 1;
+            font-size: 2.5em;
+            text-align: left;
+        }
+
+        ul li {
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sopa de letras Museo</h1>
+    <div class="sopa-de-letras">
+        <table id="sopaTabla">
+            <tr>
+                <td data-row="0" data-col="0">K</td>
+                <td data-row="0" data-col="1">R</td>
+                <td data-row="0" data-col="2">O</td>
+                <td data-row="0" data-col="3">N</td>
+                <td data-row="0" data-col="4">O</td>
+                <td data-row="0" data-col="5">S</td>
+                <td data-row="0" data-col="6">A</td>
+                <td data-row="0" data-col="7">U</td>
+                <td data-row="0" data-col="8">R</td>
+                <td data-row="0" data-col="9">U</td>
+                <td data-row="0" data-col="10">S</td>
+            </tr>
+            <tr>
+                <td data-row="1" data-col="0">A</td>
+                <td data-row="1" data-col="1">S</td>
+                <td data-row="1" data-col="2">A</td>
+                <td data-row="1" data-col="3">C</td>
+                <td data-row="1" data-col="4">H</td>
+                <td data-row="1" data-col="5">I</td>
+                <td data-row="1" data-col="6">C</td>
+                <td data-row="1" data-col="7">A</td>
+                <td data-row="1" data-col="8">O</td>
+                <td data-row="1" data-col="9">P</td>
+                <td data-row="1" data-col="10">M</td>
+            </tr>
+            <tr>
+                <td data-row="2" data-col="0">L</td>
+                <td data-row="2" data-col="1">M</td>
+                <td data-row="2" data-col="2">E</td>
+                <td data-row="2" data-col="3">S</td>
+                <td data-row="2" data-col="4">S</td>
+                <td data-row="2" data-col="5">I</td>
+                <td data-row="2" data-col="6">H</td>
+                <td data-row="2" data-col="7">O</td>
+                <td data-row="2" data-col="8">S</td>
+                <td data-row="2" data-col="9">A</td>
+                <td data-row="2" data-col="10">U</td>
+            </tr>
+            <tr>
+                <td data-row="3" data-col="0">I</td>
+                <td data-row="3" data-col="1">A</td>
+                <td data-row="3" data-col="2">M</td>
+                <td data-row="3" data-col="3">O</td>
+                <td data-row="3" data-col="4">N</td>
+                <td data-row="3" data-col="5">I</td>
+                <td data-row="3" data-col="6">T</td>
+                <td data-row="3" data-col="7">A</td>
+                <td data-row="3" data-col="8">S</td>
+                <td data-row="3" data-col="9">K</td>
+                <td data-row="3" data-col="10">S</td>
+            </tr>
+            <tr>
+                <td data-row="4" data-col="0">S</td>
+                <td data-row="4" data-col="1">A</td>
+                <td data-row="4" data-col="2">R</td>
+                <td data-row="4" data-col="3">I</td>
+                <td data-row="4" data-col="4">U</td>
+                <td data-row="4" data-col="5">Q</td>
+                <td data-row="4" data-col="6">N</td>
+                <td data-row="4" data-col="7">O</td>
+                <td data-row="4" data-col="8">M</td>
+                <td data-row="4" data-col="9">P</td>
+                <td data-row="4" data-col="10">E</td>
+            </tr>
+            <tr>
+                <td data-row="5" data-col="0">O</td>
+                <td data-row="5" data-col="1">S</td>
+                <td data-row="5" data-col="2">A</td>
+                <td data-row="5" data-col="3">M</td>
+                <td data-row="5" data-col="4">U</td>
+                <td data-row="5" data-col="5">E</td>
+                <td data-row="5" data-col="6">L</td>
+                <td data-row="5" data-col="7">N</td>
+                <td data-row="5" data-col="8">A</td>
+                <td data-row="5" data-col="9">R</td>
+                <td data-row="5" data-col="10">O</td>
+            </tr>
+            <tr>
+                <td data-row="6" data-col="0">F</td>
+                <td data-row="6" data-col="1">X</td>
+                <td data-row="6" data-col="2">S</td>
+                <td data-row="6" data-col="3">Z</td>
+                <td data-row="6" data-col="4">M</td>
+                <td data-row="6" data-col="5">A</td>
+                <td data-row="6" data-col="6">R</td>
+                <td data-row="6" data-col="7">P</td>
+                <td data-row="6" data-col="8">A</td>
+                <td data-row="6" data-col="9">J</td>
+                <td data-row="6" data-col="10">A</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Cómo funciona:</h2>
+<p>Haz clic y arrastra para seleccionar letras.</p>
+<p>Si seleccionas correctamente una palabra, se mostrará una alerta indicando que la encontraste. Las letras de la palabra encontrada se mantendrán resaltadas.</p>
+
+    <h2>Encuentra las palabras:</h2>
+    <ul>
+        <li>KRONOSAURUS</li>
+        <li>SACHICA</li>
+        <li>MUSEO</li>
+        <li>FOSIL</li>
+        <li>AMONITAS</li>
+        <li>MONQUIRA</li>
+        <li>SAMUEL</li>
+        <li>MARPAJA</li>
+    </ul>
+    <script>
+        let seleccionando = false;
+        let celdasSeleccionadas = [];
+
+        document.querySelectorAll('td').forEach(td => {
+            td.addEventListener('mousedown', function () {
+                seleccionando = true;
+                seleccionarCelda(td);
+            });
+
+            td.addEventListener('mouseover', function () {
+                if (seleccionando) {
+                    seleccionarCelda(td);
+                }
+            });
+
+            td.addEventListener('mouseup', function () {
+                seleccionando = false;
+                verificarPalabra();
+                celdasSeleccionadas = [];
+            });
+        });
+
+        document.addEventListener('mouseup', function () {
+            seleccionando = false;
+        });
+
+        function seleccionarCelda(td) {
+            if (!td.classList.contains('selected')) {
+                td.classList.add('selected');
+                celdasSeleccionadas.push(td);
+            }
+        }
+
+        function verificarPalabra() {
+            const palabras = {
+                'KRONOSAURUS': [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [0, 9], [0, 10]],
+                'SACHICA': [[1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7]],
+                'MUSEO': [[1, 10], [2, 10], [3, 10], [4, 10], [5, 10]],
+                'FOSIL': [[2, 0], [3, 0], [4, 0], [5, 0], [6, 0]],
+                'AMONITAS': [[3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [3, 7], [3, 8]],
+                'MONQUIRA': [[4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [4, 7], [4, 8]],
+                'ZUBIETA': [[3, 8], [3, 9], [3, 10]],
+                'SAMUEL': [[5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6]],
+                'MARPAJA': [[6, 4], [6, 5], [6, 6], [6, 7], [6, 8], [6, 9], [6, 10]],
+            };
+
+            for (const [palabra, posiciones] of Object.entries(palabras)) {
+                if (posiciones.every(([row, col]) =>
+                    celdasSeleccionadas.some(td =>
+                        td.dataset.row == row && td.dataset.col == col))) {
+                    alert(`¡Encontraste: ${palabra}!`);
+                    celdasSeleccionadas.forEach(td => td.classList.add('found'));
+                    return;
+                }
+            }
+
+            celdasSeleccionadas.forEach(td => td.classList.remove('selected'));
+        }
+    </script>
+</body>
+</html>

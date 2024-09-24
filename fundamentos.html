@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manos Colombianas - Artesanías de Ráquira</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #AEC6CF;
+        }
+        header {
+            background-color: #4a4a4a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #e6b800;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #ddd;
+            margin: 2rem 0;
+        }
+        .video-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-right {
+      position: absolute;
+      top: 350px;
+      right: 20px;
+      width: 500px;
+    }
+        .content {
+      padding: 20px;
+    }   
+    .image-right-2 {
+        position: absolute;
+        top: 350px;
+        left: 20px;
+        width: 500px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manos Colombianas</h1>
+        <p>Ruanas y Artesanias de Rquira, Colombia</p>
+    </header>
+    <main>
+        <h2>Descubre la magia de nuestras artesanías</h2>
+        <p>En Manos Colombianas, nos enorgullecemos de ofrecer las más finas artesanías tradicionales de Ráquira. Cada pieza cuenta una historia y lleva consigo el corazón de nuestra cultura.</p>
+        
+        <div class="video-container">    
+            <video width="800" height="400" controls>
+        <source src="videos/PITCH.mp4" type="video/mp4">
+        </div>
+        <img src="img/local2.png" class="image-right" alt="Imagen pequeña">
+        <img src="img/local.png" class="image-right-2" alt="Imagen pequeña">
+        <h3>¿Por qué elegir Manos Colombianas?</h3>
+        <ul>
+            <li>Artesanías auténticas hechas a mano</li>
+            <li>Técnicas tradicionales transmitidas por generaciones</li>
+            <li>Apoyo directo a los artesanos locales de Ráquira</li>
+            <li>Piezas únicas que no encontrarás en ningún otro lugar</li>
+        </ul>
+        
+        <p>Visítanos en Ráquira y llévate un pedacito de Colombia contigo.</p>
+        <button onclick="redirigir()">Canvas con las teorias</button>
+
+    <script>
+        function redirigir() {
+            window.location.href = "file:///C:/Program%20Files/Sublime%20Text%203/canvas.html";
+        }
+    </script>
+    </main>
+</body>
+</html>
